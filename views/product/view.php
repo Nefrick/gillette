@@ -7,7 +7,7 @@
 
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="item">
-                   <img src="/template/img/products/<?php echo $product['image']; ?>" alt="product">
+                   <img src="/upload/images/products/<?php echo $product['id'].'.png'; ?>" alt="<?php echo $product['name']; ?>">
 
                         <div class="p-name">
                             <span><?php echo $product['name']; ?></span>
@@ -23,7 +23,7 @@
                             <span><?php echo $product['price_day']; ?></span> <span>руб.</span>
                         </div>
                     </div>
-                    <a class="buy" href="#">Купить</a>
+                    <a class="buy" data-id="<?php echo $product['id']; ?>" href="/cart/add/<?php echo $product['id']; ?>">Купить</a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                 <a href="#" class="toggle-mnu hidden-lg"><span></span></a>
                 <div class="cart">
                     <a href="/cart">
-                        <p>Товаров в корзине: <span>0</span></p>
+                        <p>Товаров в корзине: <span id="cart-count"><?php echo Cart::countItems(); ?></span></p>
                     </a>
                 </div>
             </div>

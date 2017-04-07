@@ -75,7 +75,7 @@
             <?php foreach ($latestProducts as $product): ?>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="item">
-                        <a href="/product/<?php echo $product['id']; ?>"> <img src="/template/img/products/<?php echo $product['image']; ?>" alt="product">
+                        <a href="/product/<?php echo $product['id']; ?>"> <img src="/upload/images/products/<?php echo $product['id'].'.png';?>" alt="product">
 
                         <div class="p-name">
                             <span><?php echo $product['name']; ?></span>
